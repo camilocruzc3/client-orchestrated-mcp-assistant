@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "document-assistant": {
+      "command": "python",
+      "args": [
+        "-m",
+        "document_mcp.server",
+        "--downloads",
+        "./downloads"
+      ],
+      "env": {
+        "ALLOWED_DOWNLOAD_DOMAIN": "example.com"
+      }
+    }
+  }
+}
