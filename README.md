@@ -37,6 +37,57 @@ Public document sources, local storage and SMTP
 
 The server does not contain the language model and is not a fully autonomous agent. It is a **client-orchestrated tool server**: the connected AI client decides when to invoke each capability.
 
+## Demo
+
+The following screenshots show the working private implementation using generalized names and non-sensitive sample content. They demonstrate how an AI desktop client discovers the MCP tools, selects an operation and presents the result to the user.
+
+### Natural-language request and tool execution
+
+The user requests the latest document through the desktop client. The client discovers the tools exposed by the MCP server and invokes the appropriate document-source operation.
+
+![MCP tool execution for a natural-language document request](assets/screenshots/03-mcp-tool-execution.png)
+
+### Structured document results
+
+The assistant can request the latest available documents and present normalized metadata, publication dates and download options in a readable format.
+
+![Structured results returned through the MCP document tools](assets/screenshots/06-query-results.png)
+
+### Automated monitoring notification
+
+The monitoring workflow can identify new, updated or failed document downloads and deliver a structured email report.
+
+![Automated document monitoring email report](assets/screenshots/05-monitoring-report.png)
+
+<details>
+<summary><strong>View additional screenshots</strong></summary>
+
+### Local document archive
+
+Downloaded documents are persisted in a controlled local directory using sanitized filenames.
+
+![Local archive containing downloaded public documents](assets/screenshots/01-document-archive.png)
+
+### User request
+
+The interaction begins with a standard natural-language instruction in the AI desktop client.
+
+![User requesting the latest document](assets/screenshots/02-user-query.png)
+
+### Active connectors
+
+The desktop client has access to the document-source MCP server and other locally configured connectors.
+
+![Active connectors in the AI desktop client](assets/screenshots/04-active-connectors.png)
+
+### Available MCP tools
+
+The document-source server exposes focused capabilities for listing, searching, downloading and monitoring documents.
+
+![Available tools exposed by the document-source MCP server](assets/screenshots/07-available-tools.png)
+
+</details>
+
 ## Public MCP tools
 
 | Tool | Purpose |
@@ -71,6 +122,15 @@ Python, FastMCP, Model Context Protocol, Playwright, BeautifulSoup, pandas, asyn
 README.md
 .env.example
 requirements.txt
+assets/
+  screenshots/
+    01-document-archive.png
+    02-user-query.png
+    03-mcp-tool-execution.png
+    04-active-connectors.png
+    05-monitoring-report.png
+    06-query-results.png
+    07-available-tools.png
 docs/
   architecture.md
   case-study.md
